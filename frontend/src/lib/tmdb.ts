@@ -31,6 +31,21 @@ export async function fetchMovieById(id: number): Promise<Movie> {
 
 
 
+
+
+
+// 🔹 Каст (актёры)
+export async function fetchMovieCredits(id: number) {
+    const res = await tmdb.get(`/movie/${id}/credits`);
+    return res.data;
+}
+
+// 🔹 Видео / трейлеры
+export async function fetchMovieVideos(id: number) {
+    const res = await tmdb.get(`/movie/${id}/videos`);
+    return res.data;
+}
+
 // Что делает axios.create():
 //
 // Создает новый экземпляр axios с предустановленными настройками

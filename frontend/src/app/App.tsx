@@ -3,6 +3,7 @@ import { Home, Friends, Profile, Settings } from "../pages";
 import Footer from "../components/Footer.tsx";
 import Header from "../components/Header.tsx";
 import { useState } from "react";
+import MovieDetails from "../pages/MovieDetails/MovieDetails.tsx";
 
 export default function App() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -31,6 +32,11 @@ export default function App() {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/friends" element={<Friends />} />
                 <Route path="/settings" element={<Settings />} />
+
+
+
+                <Route path="/" element={<Home searchTerm={searchTerm} page={page} setPage={setPage} />} />
+                <Route path="/movie/:id" element={<MovieDetails />} />
             </Routes>
 
             <Footer />

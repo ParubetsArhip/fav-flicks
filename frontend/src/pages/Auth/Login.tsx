@@ -7,6 +7,7 @@ const schema = z.object({
     email: z.string().email("Invalid email"),
     password: z.string().min(6, "Invalid password"),
 });
+
 type FormData = z.infer<typeof schema>;
 
 export default function Login({ onSuccess }: { onSuccess?: () => void }) {
