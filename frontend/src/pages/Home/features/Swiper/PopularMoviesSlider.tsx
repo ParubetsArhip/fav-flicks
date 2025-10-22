@@ -44,7 +44,7 @@ const PopularMoviesSlider: React.FC = () => {
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 mousewheel
                 loop
-                className="w-full max-w-6xl h-[400px] rounded-2xl overflow-hidden"
+                className="w-full max-w-7xl h-[400px] rounded-2xl overflow-hidden"
                 breakpoints={{
                     320: { slidesPerView: 1 },
                     640: { slidesPerView: 2 },
@@ -75,3 +75,4 @@ const PopularMoviesSlider: React.FC = () => {
 };
 
 export default PopularMoviesSlider;
+

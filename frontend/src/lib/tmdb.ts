@@ -46,6 +46,26 @@ export async function fetchMovieVideos(id: number) {
     return res.data;
 }
 
+
+
+
+
+// Сериалы
+export const fetchPopularTV = async (page = 1) => {
+    const res = await fetch(`${BASE_URL}/tv/popular?api_key=${API_KEY}&language=en-US&page=${page}`);
+    if (!res.ok) throw new Error("Failed to fetch TV shows");
+    return res.json();
+};
+
+// Тренды (за неделю)
+export const fetchTrending = async (page = 1) => {
+    const res = await fetch(`${BASE_URL}/trending/all/week?api_key=${API_KEY}&language=en-US&page=${page}`);
+    if (!res.ok) throw new Error("Failed to fetch trending content");
+    return res.json();
+};
+
+
+
 // Что делает axios.create():
 //
 // Создает новый экземпляр axios с предустановленными настройками
